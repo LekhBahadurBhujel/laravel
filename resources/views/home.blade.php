@@ -1,3 +1,8 @@
 <x-layout>
-    <h1>This is Home Page</h1>
+    <x-slot:heading>
+        Home Page
+    </x-slot:heading>
+    <h1>{{$greeting}} This is Home Page. My name is {{$name}}.</h1>
+
+
 </x-layout>
