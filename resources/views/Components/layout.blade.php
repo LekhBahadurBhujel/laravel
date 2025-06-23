@@ -52,6 +52,7 @@
           </div>
         </div>
         <div class="-mr-2 flex md:hidden">
+
           <!-- Mobile menu button -->
           <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" aria-controls="mobile-menu" aria-expanded="false">
             <span class="absolute -inset-0.5"></span>
@@ -73,10 +74,10 @@
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <x-nav-link href="/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</x-nav-link>
-        <x-nav-link href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</x-nav-link>
-        <x-nav-link href="/contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</x-nav-link>
-        <x-nav-link href="/jobs" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Jobs</x-nav-link>
+        <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+              <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+              <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+               <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
        
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">
